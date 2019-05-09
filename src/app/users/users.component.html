@@ -1,0 +1,8 @@
+<section id="users">
+  <h1>Users</h1>
+  <ul class="user-list">
+    <li *ngFor="let user of users">
+      <app-card [type]="'user'" [content]="user.email" [title]="user.name"></app-card>
+    </li>
+  </ul>
+</section>
