@@ -1,3 +1,13 @@
-<p>
-  sidebar works!
-</p>
+<nav class="sidebar">
+  <div class="sidebar-header">
+    Header
+  </div>
+  <ul class="sidebar-favs">
+    <li *ngFor="let item of items">
+      <a routerLink='/path'>User</a>
+    </li>
+  </ul>
+  <ul class="sidebar-body">
+
+  </ul>
+</nav>

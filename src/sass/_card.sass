@@ -1,0 +1,66 @@
+.card
+	border-radius: 4px
+	padding: 8px
+	z-index: 1
+
+	&.user
+		border-bottom: 1px solid rgba(0,0,0,0.05)
+		border-radius: 0px
+		background: white
+		position: relative
+		box-shadow: 0px 2px 6px -3px rgba(0,0,0,.29)
+
+		.user-name
+			font-family: 'Roboto', 'Arial', sans-serif
+			font-size: 24px
+			padding: 4px 8px
+			border: none
+
+		.user-name-input
+			font-family: 'Roboto', 'Arial', sans-serif
+			size: none
+			width: auto
+			border: none
+			border: none
+			padding: 4px 8px
+			border-radius: 2px
+			background: white
+			font-weight: bold
+			font-size: 24px
+			display: block
+
+		.user-email
+			font-family: 'Roboto', 'Arial', sans-serif
+			font-size: 16px
+			padding: 4px 8px
+			border: none
+
+		.user-email-input
+			font-family: 'Roboto', 'Arial', sans-serif
+			size: none
+			width: auto
+			border: none
+			border: none
+			padding: 4px 8px
+			border-radius: 2px
+			background: white
+			font-weight: bold
+			font-size: 16px
+			display: block
+
+		&.selected
+			background: lighten(blue, 45%)
+
+			&:hover
+				background: adjust-color(lightgrey, 0, 0, 50)
+
+		&:hover
+			background: lighten(lightgrey, 15%)
+
+*:first-child>.card
+	&.user
+		border-radius: 4px 4px 0px 0px
+
+*:last-child>.card
+	&.user
+		border-radius: 0px 0px 4px 4px

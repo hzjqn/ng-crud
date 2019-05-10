@@ -1,0 +1,18 @@
+.sidebar
+    top: 0px
+    height: 100vh
+    position: fixed
+    width: $sidebar-full-width
+    background: white
+
+    &.active
+        width: $sidebar-full-width
+
+    &-header
+        height: $navbar-height
+        background: blue
+        
+    &-favs,
+    &-body
+        display: flex
+        flex-direction: column

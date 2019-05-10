@@ -1,8 +1,14 @@
+<app-navbar></app-navbar>
+<app-sidebar></app-sidebar>
 <section id="users">
-  <h1>Users</h1>
-  <ul class="user-list">
-    <li *ngFor="let user of users">
-      <app-card [type]="'user'" [content]="user.email" [title]="user.name"></app-card>
-    </li>
-  </ul>
+  <div class="container">
+    <div *ngIf="users">
+      <ul class="user-list">
+        <app-card [model]="user" [change]="saveUser" *ngFor="let user of users" (click)="onUserClick(user)" [editable]="selectedUser === user" [selected]="selectedUser === user" [element]="'li'" [class]="selectedUser === user ? 'selected' : ''" [type]="'user'" [content]="user.email" [title]="user.username"></app-card>
+      </ul>
+    </div>
+    <div *ngIf="!users">
+      Loading
+    </div>
+  </div>
 </section>

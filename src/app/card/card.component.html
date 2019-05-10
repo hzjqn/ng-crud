@@ -1,6 +1,15 @@
-<div ngClass="{'user': [type = 'user']}" class="card">
+<div *ngIf="element === 'div' || !element" [ngClass]="{user: this.type === 'user', selected: this.selected}" class="card">
   <h2>{{title}}</h2>
   <p class="card-content">
     {{content}}
   </p>
 </div>
+
+<li *ngIf="element === 'li'" [ngClass]="{user: this.type === 'user', selected: this.selected}" class="card">
+  <h2 class="user-name" *ngIf="!editable">{{title}}</h2>
+  <input class="user-name-input" name="username" *ngIf="editable" [(ngModel)]="model.username" >
+  <p *ngIf="!editable" class="user-email">
+    {{content}}
+  </p>
+  <input class="user-email-input" name="email" *ngIf="editable" [(ngModel)]="model.email" >
+</li>

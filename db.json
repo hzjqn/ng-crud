@@ -1,16 +1,27 @@
 {
+    "session": {
+        "username": "adminUser"
+    },
     "users": [
         {
             "id": 1,
             "username": "adminUser",
             "role": 0,
-            "email": "admin@localhost.com"
+            "email": "admin@localhost.com",
+            "favs": [
+                "users",
+                "search"
+            ]
         },
         {
             "id": 2,
             "username": "testUser",
             "role": 1,
-            "email": "at@dominio.com"
+            "email": "at@dominio.com",
+            "favs": [
+                "home",
+                "users"
+            ]
         },
         {
             "id": 3,

@@ -1,0 +1,39 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import 'normalize'
+@import 'variables'
+
+body
+    background: lightgrey
+    margin: 0px
+    padding-top: 64px
+    font-family: 'Roboto', 'Arial', sans-serif
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+    margin: 0px
+
+ul
+    padding: 0px
+    margin: 0px
+
+p
+    margin: 0px
+
+body
+    &.sidebar-active
+        .container
+            padding-left: $sidebar-full-width
+    &
+        .container
+            padding-left: $sidebar-full-width
+
+@import 'navbar'
+@import 'sidebar'
+@import 'users' 
+@import 'card'
