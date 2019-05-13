@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import Session from '../session';
+import { SessionService } from '../session.service';
 
 @Component({
   selector: 'app-sidebar',
@@ -7,9 +9,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidebarComponent implements OnInit {
 
-  constructor() { }
+  session : Session;
+
+  constructor(private sessionService: SessionService) { }
+
+  getSession() {
+    return this.sessionService.getSessionData()
+    .subscribe(data => {
+      this.session = data;
+    });
+  }
 
   ngOnInit() {
+    this.getSession();
+  }
+
+  ngOnDestroy(): void {
+    return this.getSession().unsubscribe();
   }
 
 }

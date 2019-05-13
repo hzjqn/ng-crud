@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import Session from './session';
+import { SessionService } from './session.service';
 
 @Component({
   selector: 'app-root',

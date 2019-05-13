@@ -1,6 +1,13 @@
 {
     "session": {
-        "userId": 1
+        "id": 1,
+        "username": "adminUser",
+        "role": 0,
+        "email": "admin@localhost.com",
+        "favs": [
+            "users",
+            "search"
+        ]
     },
     "users": [
         {
